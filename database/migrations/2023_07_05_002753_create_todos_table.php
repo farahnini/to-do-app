@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
+            $table->string('task_name');
+            $table->date('start_date');
+            $table->date('end_date');	
             $table->timestamps();
         });
     }
